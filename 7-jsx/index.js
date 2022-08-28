@@ -4,11 +4,15 @@ import ReactDOM from "react-dom";
 import { MeuCounter } from "./MeuCounter.js";
 import { MeuCounterJSX } from "./MeuCounterJSX.js";
 
-const App = React.createElement("div", {}, [
-  React.createElement(MeuCounter),
-  React.createElement(MeuCounterJSX),
-]);
+const App = () => {
+  return (
+    <div>
+      <MeuCounter/>
+      <MeuCounterJSX/>
+    </div>
+  )
+}
 
 const root = document.getElementById("root");
 
-ReactDOM.render(App, root);
+ReactDOM.render(<App/>, root);
